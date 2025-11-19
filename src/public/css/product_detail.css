@@ -1,0 +1,187 @@
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 16px;
+    font-weight: normal;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.detail-form {
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / 3;
+}
+
+
+.current-image {
+    width: 100%;
+    /* 画像の縦横比を固定 */
+    aspect-ratio: 1.5;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.detail-image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.no-image-placeholder {
+    color: #999;
+}
+
+input[type="file"] {
+    font-size: 14px;
+}
+
+.form-fields {
+    padding-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.submit-btn {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    background-color: #e0a800;
+}
+
+.back-btn {
+    background-color: #ddd;
+    color: #555;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #ccc;
+}
+
+
+.delete-btn {
+    color: #dc3545;
+    font-size: 24px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+
+/* --- 8. レスポンシブ対応 --- */
+@media (max-width: 768px) {
+    .form-grid {
+        /* 縦一列に変更 */
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: 1 / 2;
+        /* 縦一列に戻す */
+    }
+
+    .form-fields {
+        padding-top: 0;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .back-btn,
+    .submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
